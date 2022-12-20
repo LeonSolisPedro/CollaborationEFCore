@@ -6,7 +6,7 @@ using CollaborationEFCore.Models;
 
 namespace CollaborationEFCore.Data
 {
-    public partial class PetFinderContext : DbContext
+    public class PetFinderContext : DbContext
     {
 
         public PetFinderContext(DbContextOptions<PetFinderContext> options)
@@ -16,7 +16,7 @@ namespace CollaborationEFCore.Data
 
         public virtual DbSet<Pet> Pets { get; set; } = null!;
 
-        partial void OnModelCreatingPartial(ModelBuilder modelBuilder)
+        protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
 
         }

@@ -3,6 +3,7 @@ using CollaborationEFCore.Data;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
+using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 
 #nullable disable
@@ -10,9 +11,10 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace CollaborationEFCore.Migrations
 {
     [DbContext(typeof(PetFinderContext))]
-    partial class PetFinderContextModelSnapshot : ModelSnapshot
+    [Migration("20221220030747_addingidentity2")]
+    partial class addingidentity2
     {
-        protected override void BuildModel(ModelBuilder modelBuilder)
+        protected override void BuildTargetModel(ModelBuilder modelBuilder)
         {
 #pragma warning disable 612, 618
             modelBuilder
@@ -23,13 +25,6 @@ namespace CollaborationEFCore.Migrations
 
             modelBuilder.Entity("CollaborationEFCore.Models.Pet", b =>
                 {
-                    b.Property<int>("Id")
-                        .ValueGeneratedOnAdd()
-                        .HasColumnType("int")
-                        .HasColumnName("ID");
-
-                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("Id"), 1L, 1);
-
                     b.Property<string>("OwnerName")
                         .IsRequired()
                         .HasMaxLength(255)
@@ -48,7 +43,11 @@ namespace CollaborationEFCore.Migrations
                         .IsUnicode(false)
                         .HasColumnType("varchar(255)");
 
-                    b.HasKey("Id");
+                    b.Property<int>("SuperCoolId")
+                        .ValueGeneratedOnAdd()
+                        .HasColumnType("int");
+
+                    SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("SuperCoolId"), 1L, 1);
 
                     b.ToTable("Pets");
                 });

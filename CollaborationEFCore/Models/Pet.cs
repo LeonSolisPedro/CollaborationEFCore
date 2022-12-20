@@ -11,14 +11,18 @@ namespace CollaborationEFCore.Models
         [Key]
         [Column("ID")]
         public int Id { get; set; }
+
         [StringLength(255)]
         [Unicode(false)]
         public string PetName { get; set; } = null!;
+
         [StringLength(255)]
         [Unicode(false)]
         public string PetType { get; set; } = null!;
+
         [StringLength(255)]
         [Unicode(false)]
         public string OwnerName { get; set; } = null!;
+
     }
 }
