@@ -24,7 +24,7 @@ namespace CollaborationEFCore.Data
 
                     new Pet
                     {
-                        Id = 1,
+                        Id = 2,
                         PetName = "Negro",
                         PetType = "Perrito",
                         OwnerName = "Pedro León"
