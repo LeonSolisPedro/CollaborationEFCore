@@ -1,4 +1,4 @@
-﻿namespace CollaborationEFCore.Models;
+﻿namespace CollaborationEFCore.Models.ViewModels;
 
 public class ErrorViewModel
 {

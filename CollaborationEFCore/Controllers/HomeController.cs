@@ -1,6 +1,7 @@
 ﻿using System.Diagnostics;
 using Microsoft.AspNetCore.Mvc;
 using CollaborationEFCore.Models;
+using CollaborationEFCore.Models.ViewModels;
 
 namespace CollaborationEFCore.Controllers;
 

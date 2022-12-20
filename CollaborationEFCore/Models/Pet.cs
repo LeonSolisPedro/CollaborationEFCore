@@ -6,7 +6,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace CollaborationEFCore.Models
 {
-    public partial class Pet
+    public class Pet
     {
         [Key]
         [Column("ID")]

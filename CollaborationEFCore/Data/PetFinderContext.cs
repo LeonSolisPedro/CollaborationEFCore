@@ -15,6 +15,7 @@ namespace CollaborationEFCore.Data
         }
 
         public virtual DbSet<Pet> Pets { get; set; } = null!;
+        public virtual DbSet<Owner> Owners { get; set; } = null!;
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
